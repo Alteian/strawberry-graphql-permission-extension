@@ -81,11 +81,11 @@ class MyModel(models.Model):
 
 5. Using the extenstion
 ```python
-@strawberry.type(extensitons=[HasPermissionToInteract()])
+@strawberry.field(extensitons=[HasPermissionToInteract()])
 def update_user(self, info, input: UpdateUserInput) -> UpdateUserPayload:
     ...
 
-@strawberry.field(extensitons=[HasPermissionToCreate(Product)])
+@strawberry.mutation(extensitons=[HasPermissionToCreate(Product)])
 def create_product(self, info, input: CreateProductInput) -> CreateProductPayload:
     ...
 ```
