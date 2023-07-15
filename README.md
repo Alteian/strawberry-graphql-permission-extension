@@ -25,7 +25,7 @@ class IsUser(Role): # Role subclass is redundant, but it is recommended to use i
 Based on cases of ownership of objects
 
 ```python
-from strawberry_graphql_permission_extension import BaseOwnerFieldEnum
+from strawberry_graphql_permission_extension.utils import BaseOwnerFieldEnum
 
 class OwnerFieldEnum(BaseOwnerFieldEnum):
     USER = "user" <-- link to the user field in the model
