@@ -89,3 +89,6 @@ def update_user(self, info, input: UpdateUserInput) -> UpdateUserPayload:
 def create_product(self, info, input: CreateProductInput) -> CreateProductPayload:
     ...
 ```
+
+
+This permission system was created while working on [LearnerOn](https://learneron.net) and with consent of the company part of it was published as an open source project.
