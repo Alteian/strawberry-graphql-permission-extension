@@ -75,6 +75,7 @@ class HasPermissionToInteract(BasePermissionExtension):
             user (UserType): The user for whom the permission is being checked.
             info (Info): Additional information related to the permission check.
             source (typing.Any): The source object from which the field is being resolved.
+            permission_case_switcher (typing.Callable): The permission case switcher.
             **kwargs (typing.Any): Additional keyword arguments.
 
         Returns:
