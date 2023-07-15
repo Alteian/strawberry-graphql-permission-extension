@@ -15,7 +15,7 @@ This repository provides an extension for managing RBAC permissions in Django us
 ```python
 from strawberry_graphql_permission_extension.utils import Role
 
-class IsUser:
+class IsUser(Role): # Role subclass is redundant, but it is recommended to use it for clarity
     @staticmethod
     def has_permission(info) -> bool:
         user = info.context.user
