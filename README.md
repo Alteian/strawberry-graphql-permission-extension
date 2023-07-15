@@ -63,7 +63,7 @@ class MyPermissionCaseSwitcher(PermissionCaseSwitcher):
     def resolve_case(cls, info, instance):
         if info.context.user.is_anonymous:
             return cls.case_anonymous()
-        elif instance.OWNER_FIELD == OwnerFieldEnum.USER:
+        elif instance.OWNER_FIELD == OwnerFieldEnum.USER.value:
             return cls.case_user(info, instance, case="user")
         ...
 ```
